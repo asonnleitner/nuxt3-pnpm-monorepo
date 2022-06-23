@@ -4,7 +4,6 @@ import {
   defineNuxtModule,
   useLogger,
 } from '@nuxt/kit'
-import type { ModuleDefinition } from '@nuxt/schema'
 
 export default defineNuxtModule({
   async setup(_options, _nuxt) {
@@ -15,4 +14,4 @@ export default defineNuxtModule({
 
     await addAutoImportDir(resolve('./src'))
   },
-} as ModuleDefinition<never>)
+})
