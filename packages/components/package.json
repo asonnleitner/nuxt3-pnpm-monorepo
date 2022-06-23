@@ -1,0 +1,9 @@
+{
+  "name": "@pkgs/components",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "module": "index.ts",
+  "peerDependencies": {
+    "vue": "latest"
+  }
+}

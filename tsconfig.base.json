@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "moduleResolution": "Node",
+    "jsx": "preserve",
+    "allowJs": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "isolatedModules": true,
+    "preserveValueImports": true,
+    "importsNotUsedAsValues": "error",
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "paths": {
+      "@pkgs/*": ["packages/*"]
+    }
+  }
+}

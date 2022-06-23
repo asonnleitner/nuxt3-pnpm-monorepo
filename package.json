@@ -1,21 +1,47 @@
 {
-  "name": "my-turborepo",
-  "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@7.3.0",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "dev:apps": "pnpm --recursive --parallel --stream --filter './apps/**' dev",
+    "build:apps": "pnpm --recursive --parallel --stream --filter './apps/**' build",
+    "typecheck:apps": "pnpm --recursive --parallel --stream --filter './apps/**' typecheck",
+    "analyze:apps": "pnpm --recursive --parallel --stream --filter './apps/**' analyze",
+    "info:apps": "pnpm --recursive --parallel --stream --filter './apps/**' info",
+    "dev:playground": "pnpm --filter ./apps/playground dev",
+    "build:playground": "pnpm --filter ./apps/playground build",
+    "preview:playground": "pnpm --filter ./apps/playground preview",
+    "dev:second-playground": "pnpm --filter ./apps/second-playground dev",
+    "build:second-playground": "pnpm --filter ./apps/second-playground build",
+    "preview:second-playground": "pnpm --filter ./apps/second-playground preview",
+    "lint": "eslint --ext .vue,.js,.ts,.jsx,.tsx --max-warnings 0 . && pretty-quick --check",
+    "lint:fix": "eslint --fix --ext .vue,.js,.ts,.jsx,.tsx . && pretty-quick",
+    "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@pinia/nuxt": "latest",
+    "@pkgs/components": "workspace:*",
+    "@pkgs/composables": "workspace:*",
+    "@types/node": "latest",
+    "@unocss/nuxt": "latest",
+    "@vueuse/nuxt": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "nuxt": "npm:nuxt@rc",
+    "pinia": "latest",
     "prettier": "latest",
-    "turbo": "latest"
+    "pretty-quick": "latest",
+    "typescript": "latest",
+    "vue": "latest",
+    "vue-tsc": "latest"
   },
-  "dependencies": {},
-  "packageManager": "pnpm@7.2.1"
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

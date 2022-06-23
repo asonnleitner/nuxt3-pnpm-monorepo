@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.web.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./apps/playground/tsconfig.json"
+    },
+    {
+      "path": "./apps/second-playground/tsconfig.json"
+    }
+  ]
+}

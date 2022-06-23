@@ -1,9 +1,9 @@
 {
-  "name": "playground",
+  "name": "second-playground",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev --port 3000",
+    "dev": "nuxi dev --port 3001",
     "build": "pnpm clean && nuxi build",
     "generate": "nuxi generate",
     "preview": "nuxi preview",

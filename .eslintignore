@@ -1,0 +1,5 @@
+**/.output
+node_modules
+pnpm-lock.yaml
+coverage
+README.md
